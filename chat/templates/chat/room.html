@@ -16,7 +16,7 @@
         const scheme = window.location.protocol == "https:" ? 'wss://' : 'ws://';
 
         const chatSocket = new WebSocket(
-            schema + '://'
+            scheme
             + window.location.host
             + '/ws/chat/'
             + roomName
