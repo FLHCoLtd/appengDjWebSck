@@ -1,0 +1,3 @@
+DJANGO_SECRET_KEY: django-insecure-ahsfmg-*7=ng0nhoxv1z-yrfpr=gvbmypogc21jeh)4a31h(da
+REDIS_HOST: 10.127.174.3
+REDIS_PORT: 6379
