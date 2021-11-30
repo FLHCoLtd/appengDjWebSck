@@ -18,7 +18,7 @@ service: djwebsck
 
 # Use a special gunicorn worker class to support websockets.
 #entrypoint: gunicorn -b :$PORT -k flask_sockets.worker main:app
-entrypoint: gunicorn -b :$PORT mysite.wsgi
+entrypoint: daphne -b :$PORT mysite.asgi:application
 
 runtime_config:
   python_version: 3
@@ -37,5 +37,10 @@ manual_scaling:
 # network:
 #   session_affinity: true
 
-includes:
-  - app_env_vars.yaml
+#includes:
+#  - app_env_vars.yaml
+
+env_variables:
+  DJANGO_SECRET_KEY: django-insecure-ahsfmg-*7=ng0nhoxv1z-yrfpr=gvbmypogc21jeh)4a31h(da
+  REDIS_HOST: 10.8.15.19
+  REDIS_PORT: 6379
