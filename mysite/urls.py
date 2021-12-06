@@ -32,5 +32,5 @@ class EnvView(View):
 urlpatterns = [
     path('chat/', include('chat.urls')),
     # path('admin/', admin.site.urls),
-    path(r'^$', EnvView.as_view()),
+    path('', EnvView.as_view()),
 ]
